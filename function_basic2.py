@@ -1,61 +1,47 @@
-#1. Countdown
+#1. Countdown - create a function that accepts a number as an input. Return a new list that counts down by one, from the number, down to 0
+# numList = []
+# def countdown(num1):
+#     for i in range(num1, 0, -1):
+#         # print(i)
+#         numList.append(i)
+#     return numList
 
-# def countDown(num):
-#     x = [] #create a variable containing an empty list
-#     for i in range(num, -1, -1): #loops i from the argument to 0 in iterations of -1
-#         # print(i) #to text if loop is working
-#         x.append(i) #pushes i's value to x's list
-#     print(x)
+# # countdown(10)
+# print(numList)
 
-# countDown(10)
+#2. Print and return - create a function that will receive a list with two number. Print the first value and return the second
 
-#2. Print and return
-# list = [1, 2] 
-# def print_return(list):
+# def printReturn(list):
 #     print(list[0])
-#     return list[1]
+#     return (list[1])
 
-# x = print_return(list)
-# print(x)
+# print(printReturn([2,3]))
 
-#3. first plus length
-# list = [16, 2, 3, 4, 5, 6, 7]
-# def first_plus_length(list):
-#     print(list)
+#3. First plus length - create a function that accepts a list and returns the sum of the first value in the list plus the lists length
+# def firstPlusLength(list):
 #     sum = list[0] + len(list)
-#     print(sum)
+#     return sum 
 
-# first_plus_length(list)
+# print(firstPlusLength([1, 2, 4, 5, 6, 9]))
 
-#4. values greater than second
-# list = [4, 5, 6, 9, 1, 2, 1] #variable created so that function can accept array
-# def values_greater_than_second(list): #function created
-#     newList = [] #variable created so new  list can be created in empty list
-#     i = 0 #variable completed for loop
-#     while i < len(list): #loops through list
-#         if list[i] > list [1]: #if list of i is greater than the 1st index of i then
-#             newList.append(list[i]) #add list[i] to newLIst
-#         i +=1 
-#     # print(newList) #test if this is working..and it is
-#     if len(newList) < 3:
-#         # print("False") #test if this is working and it is
-#         return "False" 
-#     else :
-#         # print(newList)
-#         return newList
+#4. Values greater than second - write a function that accepts a list and creates a new list containing only the value from the original list that are greater than its 2nd value. print how many values this is and the return the new list. if the list has less than 2 elements have the function return false
+# def valueGreater(listNum):
+#     newList = []
+#     if len(listNum) < 2:
+#         return False
+#     for i in range(0, len(listNum)):
+#         if listNum[i] > listNum[1]:
+#             newList.append(listNum[i])
+#     print(newList)
+    
+# print(valueGreater([10]))
 
-# newLists = values_greater_than_second(list)
-# print(newLists)
+#5. This length, that value - write a function that accepts two integers as parameters: size and value. The function should create and return a list whose length is equal to the given size, and whose value are all the given value
+def lengthValue(size, value):
+    returnList = []
+    for i in range(0, size):
+        returnList.append(value)
+    print(returnList)
+    return returnList
 
-#5. this length, that value 
-# def length_and_value(length, value):
-#     x = []
-#     i = 0
-#     while i < length:
-#         x.append(value)
-#         i +=1
-#     # print(x)
-#     return x 
-
-# newList = length_and_value(7, 8)
-# print(newList)
+lengthValue(7, 8)
